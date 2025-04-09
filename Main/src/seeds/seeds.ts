@@ -16,19 +16,19 @@ const seedDatabase = async () => {
     // Create users
     const users = await User.create([
       {
-        username: 'alice',
+        username: 'Alice',
         email: 'alice@example.com',
       },
       {
-        username: 'bob',
-        email: 'bob@example.com',
+        username: 'Robert',
+        email: 'robert@example.com',
       },
       {
-        username: 'charlie',
-        email: 'charlie@example.com',
+        username: 'Thomas',
+        email: 'thomas@example.com',
       },
       {
-        username: 'diana',
+        username: 'Diana',
         email: 'diana@example.com',
       }
     ]);
@@ -39,19 +39,19 @@ const seedDatabase = async () => {
     const thoughts = await Thought.create([
       {
         thoughtText: 'This is my first thought!',
-        username: 'alice',
+        username: 'Alice',
       },
       {
         thoughtText: 'Working with MongoDB is fun.',
-        username: 'bob',
+        username: 'Robert',
       },
       {
         thoughtText: 'NoSQL databases are perfect for social networks.',
-        username: 'charlie',
+        username: 'Thomas',
       },
       {
         thoughtText: 'Express makes API development so much easier.',
-        username: 'diana',
+        username: 'Diana',
       }
     ]);
     
@@ -79,7 +79,7 @@ const seedDatabase = async () => {
         $push: { 
           reactions: { 
             reactionBody: 'Love this!', 
-            username: 'bob' 
+            username: 'Robert' 
           } 
         } 
       },
@@ -92,7 +92,7 @@ const seedDatabase = async () => {
         $push: { 
           reactions: { 
             reactionBody: 'I agree completely!', 
-            username: 'alice' 
+            username: 'Alice' 
           } 
         } 
       },
@@ -103,13 +103,13 @@ const seedDatabase = async () => {
     
     // Add friends
     await User.findOneAndUpdate(
-      { username: 'alice' },
+      { username: 'Alice' },
       { $push: { friends: users[1]._id } },
       { new: true }
     );
     
     await User.findOneAndUpdate(
-      { username: 'bob' },
+      { username: 'Robert' },
       { $push: { friends: users[0]._id } },
       { new: true }
     );
