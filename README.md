@@ -1,5 +1,5 @@
 # Social-Network
-This application is a faux social network e.g. LinkedIn, Meta....
+### This application is a faux social network e.g. LinkedIn, Meta....
 
 ## User Story
 
@@ -32,6 +32,12 @@ WHEN I test API POST and DELETE routes in Insomnia
 
 THEN I am able to successfully create and delete reactions to thoughts and add and remove friends to a user’s friend list
 
-Insomnia screenshot:
+## Insomnia screenshot:
 
 ![Insomnia screenshot](Insomnia.png)
+
+## Links:
+
+https://github.com/argadeps/Social-Network
+
+https://app.screencastify.com/v3/watch/BAFJXgcZCZhWvQnI6HSG
